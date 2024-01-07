@@ -1,0 +1,2 @@
+Space complexity: O(1) for no extra space
+Character array is faster than string
