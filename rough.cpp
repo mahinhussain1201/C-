@@ -1,32 +1,27 @@
-#include <iostream>
+#include<iostream>
 #include<vector>
 using namespace std;
-void f(int n,int x,int t){
-   if(x>n)
-   return;
-   if(x<=0){
-    cout<<x<<" ";
-    x+=5;
-    t*=-1;
-   }
-   if(t>0){
-    cout<<x<<" ";
-    return f(n,x+5,t);
-   }
-   else if(t<0){
-    cout<<x<<" ";
-    return f(n,x-5,t);
-   }
-
-
+bool f(int **arr,int i,int j,int m,int n,vector<int>&v){
+    if(i==m-1 && j==n-1){
+        for(int i=0;i<m;i++){
+            for(int j=0;j<n;j++){
+                cout<<v[i][j]<<" ";
+            }
+            cout<<endl;
+        }
+        return true;
+    }
 }
 int main(){
-    // vector<int>v;
-    // for(int i=0;i<5;i++){
+    // vector<int> v;
+    // for(int i=0;i<4;i++){
     //     int ele;
     //     cin>>ele;
     //     v.push_back(ele);
     // }
-    f(10,10,-1);
-    return 0;
+    // f(v,0,1);
+    int arr[5][5]={{1,0,1,0,1},{1,1,1,1,1},{0,1,0,1,0},{1,0,0,1,1},{1,1,1,0,1}};
+    int m=5,n=5;
+    vector<vector<int> >v(m,vector<int>(n,0));
+    f(arr,0,0,m,n,v);
 }
