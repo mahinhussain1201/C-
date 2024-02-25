@@ -1,4 +1,4 @@
-//funtion thatbis called when object is deleted
+//funtion that is called when object is deleted
 // cannot pass any parameters
 // nane: ~(class_name)
 
